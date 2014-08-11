@@ -1,4 +1,4 @@
-package com.yeepay.ftp;
+package com.yeepay.service.impl.ftp;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 import javax.servlet.ServletContext;
 
-import com.yeepay.socket.ProcessSocketData;
+import com.yeepay.service.impl.ProcessSocketData;
 
 public class FtpServer extends Thread  {
 //	******************

@@ -1,4 +1,4 @@
-package com.yeepay.ftp;
+package com.yeepay.service.impl.ftp;
 
 public class UserInfo {
 	    String user;

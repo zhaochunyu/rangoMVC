@@ -1,4 +1,4 @@
-package com.yeepay.ftp;
+package com.yeepay.service.impl.ftp;
 
 public class FtpState {
 	 final static int FS_WAIT_LOGIN = 0;    //等待输入用户名状态

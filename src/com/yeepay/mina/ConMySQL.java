@@ -1,4 +1,4 @@
-package com.yeepay.mysql;
+package com.yeepay.mina;
 
 
 

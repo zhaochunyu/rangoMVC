@@ -1,4 +1,4 @@
-package com.yeepay.ftp;
+package com.yeepay.service.impl.ftp;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;

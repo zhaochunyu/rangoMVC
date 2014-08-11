@@ -1,4 +1,4 @@
-package com.yeepay.ftp;
+package com.yeepay.service.impl.ftp;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;

@@ -1,4 +1,4 @@
-package com.yeepay.moco;
+package com.yeepay.service.impl;
 import static com.github.dreamhead.moco.Moco.*;
 import static com.github.dreamhead.moco.Runner.runner;
 
