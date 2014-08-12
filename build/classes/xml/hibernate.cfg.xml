@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+         "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.username">root</property>
+		 <property name="connection.url">jdbc:mysql://60.1.1.25:3306/rango</property>
+		<!--<property name="connection.url">jdbc:mysql://127.0.0.1:3306/octopus</property>-->
+		<property name="dialect">
+			org.hibernate.dialect.MySQL5InnoDBDialect
+	</property>
+		<property name="myeclipse.connection.profile">mysql</property>
+		<property name="connection.password">jira1322011</property>
+		<!--  <property name="connection.password">psyadi</property>-->
+		<property name="connection.driver_class">
+			com.mysql.jdbc.Driver
+	</property>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="show_sql">false</property>
+		<property name="hibernate.connection.autocommit">true</property>
+		<property name="connection.autoReconnectForPools">true</property> 
+    <property name="connection.is-connection-validation-required">true</property> 
+		
+		<!-- configuration pool  c3p0-->
+		<!-- 最大连接数 -->
+        <property name="hibernate.c3p0.max_size">20</property>
+
+        <!-- 最小连接数 -->
+        <property name="hibernate.c3p0.min_size">5</property>
+
+        <!-- 获得连接的超时时间,如果超过这个时间,会抛出异常，单位毫秒 -->
+        <property name="hibernate.c3p0.timeout">1800</property>
+
+        <!-- 最大的PreparedStatement的数量 -->
+        <property name="hibernate.c3p0.max_statements">50</property>
+
+        <!-- 每隔120秒检查连接池里的空闲连接 ，单位是秒-->
+        <property name="hibernate.c3p0.idle_test_period">120</property>
+
+        <!-- 当连接池里面的连接用完的时候，C3P0一下获取的新的连接数 -->
+        <property name="hibernate.c3p0.acquire_increment">2</property>
+
+        <!-- 每次都验证连接是否可用 -->
+        <property name="hibernate.c3p0.validate">true</property>
+  
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="jdbc.batch_size">20</property>
+		<property name="connection.autocommit">true</property>
+
+		<!-- 显示sql语句 -->
+		<property name="show_sql">true</property>
+		<property name="connection.useUnicode">true</property>
+		<property name="connection.characterEncoding">UTF-8</property>
+
+		<!-- 缓存设置 -->
+		<property name="cache.provider_configuration_file_resource_path">/ehcache.xml</property>
+		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+		<property name="cache.use_query_cache">true</property>
+
+	</session-factory>
+</hibernate-configuration>

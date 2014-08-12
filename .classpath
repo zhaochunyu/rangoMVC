@@ -28,7 +28,6 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/freemarker-2.3.19.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/freemarker.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/guava-17.0.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/hessian-3.0.20.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/hibernate-c3p0-4.3.0.Final.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/hibernate-commons-annotations-4.0.4.Final.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/hibernate-core-4.3.0.Final.jar"/>
@@ -80,8 +79,7 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-tx-4.0.2.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-web-4.0.2.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-webmvc-4.0.2.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/yeepay-rmi-1.0-SNAPSHOT.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/yeepay-utils-common-1.0-SNAPSHOT.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/hessian-4.0.38.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
