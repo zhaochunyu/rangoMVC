@@ -54,6 +54,12 @@ public interface RangodataService {
 	 * @return
 	 */
 	public Rangodata findRangodataByByCondition(RangodataModel rangodataModel);
+	/**
+	 * 通过条件查找用户
+	 * @param RangodataModel
+	 * @return
+	 */
+	public Rangodata findRangodataSByCondition(int port);
 	
 	/**
 	 * 通过ID查询Rangodata

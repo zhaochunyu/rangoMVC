@@ -15,6 +15,8 @@ public class RangodataModel implements Serializable {
 	private String returnmsg;
 	private Date createTime;
 	private Date updateTime;
+	private String pact;
+	private String returntype; 
 	public Integer getId() {
 		return id;
 	}
@@ -51,6 +53,18 @@ public class RangodataModel implements Serializable {
 	}
 	public void setUpdateTime(Date updateTime) {
 		this.updateTime = updateTime;
+	}
+	public String getPact() {
+		return pact;
+	}
+	public void setPact(String pact) {
+		this.pact = pact;
+	}
+	public String getReturntype() {
+		return returntype;
+	}
+	public void setReturntype(String returntype) {
+		this.returntype = returntype;
 	}
 	
 }

@@ -124,7 +124,14 @@ public class BaseDAOImpl<T> implements BaseDAO<T> {
 			return null;
 		}
 	}
-
+	public T get(String hql) {
+		List<T> l = this.find(hql);
+		if (l != null && l.size() > 0) {
+			return l.get(0);
+		} else {
+			return null;
+		}
+	}
 	public Long count(String hql) {
 //		return (Long) this.getCurrentSession().createQuery(hql).uniqueResult();
 		return new Long((long)this.getCurrentSession().createQuery(hql).list().size());
@@ -175,5 +182,7 @@ public class BaseDAOImpl<T> implements BaseDAO<T> {
 		}
 		return q.executeUpdate();
 	}
+
+
 
 }

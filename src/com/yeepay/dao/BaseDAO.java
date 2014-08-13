@@ -14,7 +14,7 @@ public interface BaseDAO<T> {
 	/**
 	 * 保存一个对象
 	 * 
-	 * @param o
+	 * @param ofind
 	 * @return
 	 */
 	public Serializable save(T o);
@@ -99,7 +99,7 @@ public interface BaseDAO<T> {
 	 * @return Object
 	 */
 	public T get(Class<T> c, Serializable id);
-
+	public T get(String hql);
 	/**
 	 * 获得一个对象
 	 * 

@@ -34,7 +34,8 @@ public class Rangodata implements Serializable{
 	private String returnmsg;
 	private Date createTime;
 	private Date updateTime;
-	
+	private String pact;
+	private String returntype; 
 	// 主键 ：@Id    主键生成方式：strategy = "increment"
 	//映射表中id这个字段，不能为空，并且是唯一的
 	@GenericGenerator(name = "generator", strategy = "increment")
@@ -47,7 +48,7 @@ public class Rangodata implements Serializable{
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	@Column(name = "port", unique = true, nullable = false)
+	@Column(name = "port",  nullable = false)
 	public Integer getPort() {
 		return port;
 	}
@@ -61,7 +62,14 @@ public class Rangodata implements Serializable{
 	public void setURL(String uRL) {
 		URL = uRL;
 	}
-	@Column(name = "returnmsg", length = 50)
+	@Column(name = "pact", length = 250)
+	public String getPact() {
+		return pact;
+	}
+	public void setPact(String pact) {
+		this.pact = pact;
+	}
+	@Column(name = "returnmsg", length = 550)
 	public String getReturnmsg() {
 		return returnmsg;
 	}
@@ -84,6 +92,13 @@ public class Rangodata implements Serializable{
 	}
 	public void setUpdateTime(Date updateTime) {
 		this.updateTime = updateTime;
+	}
+	@Column(name = "returntype", length = 250)
+	public String getReturntype() {
+		return returntype;
+	}
+	public void setReturntype(String returntype) {
+		this.returntype = returntype;
 	}
 	
 	
