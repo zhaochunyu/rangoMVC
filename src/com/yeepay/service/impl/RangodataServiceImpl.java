@@ -18,7 +18,7 @@ import com.yeepay.util.Util;
 public class RangodataServiceImpl implements RangodataService {
 
 	@Resource
-	private BaseDAOImpl<Rangodata> rangodataDAO;
+	private BaseDAO<Rangodata> rangodataDAO ;
  
 	@Override
 	public void saveRango(Rangodata rangodata) {
@@ -85,15 +85,14 @@ public class RangodataServiceImpl implements RangodataService {
 
 	@Override
 	public Rangodata findRangodataSByCondition(int port) {
-		System.out.println("&&&&&&&&&&&7");
-		
-		StringBuffer hql = new StringBuffer("from rangodata where pact=? order by id DESC limit 0,1");
+		System.out.println("&&&&&&&&&&&");		
+		StringBuffer hql = new StringBuffer("from Rangodata where pact=? order by id DESC ");
 		List<Object> paramList = new ArrayList<Object>();		
-		RangodataModel rangodataModel=new RangodataModel();
-		rangodataModel.setPact("socket");
-		paramList.add(rangodataModel.getPact());
-		System.out.println(" *************** "+paramList.size());	
-		return rangodataDAO.get(hql.toString());
+//		RangodataModel rangodataModel=new RangodataModel();
+//		rangodataModel.setPact("socket");
+//		paramList.add(rangodataModel.getPact());
+		paramList.add("socket");
+		return rangodataDAO.get(hql.toString(),paramList.toArray());
 	}
 
 }

@@ -18,9 +18,12 @@
     <param-name>contextConfigLocation</param-name>
     <param-value>classpath:/xml/applicationContext.xml</param-value>
   </context-param>
+  
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
+  <!-- load-on-startup：表示启动容器时初始化该Servlet；
+url-pattern：表示哪些请求交给Spring Web MVC处理， “/” 是用来定义默认servlet映射的。也可以如“*.html”表示拦截所有以html为扩展名的请求。-->
   <servlet>
     <servlet-name>rangoMVC</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -35,6 +38,8 @@
     <url-pattern>/</url-pattern>
   </servlet-mapping>
   <filter>
+  
+  <!--以后我们项目及所有页面的编码均为UTF-8。-->
     <filter-name>CharacterEncodingFilter</filter-name>
     <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
     <init-param>
@@ -46,6 +51,7 @@
     <filter-name>CharacterEncodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
+  <!-- 配置Session -->  
   <filter>
     <filter-name>openSessionInViewFilter</filter-name>
     <filter-class>org.springframework.orm.hibernate4.support.OpenSessionInViewFilter</filter-class>
@@ -58,6 +64,9 @@
     <filter-name>openSessionInViewFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
+  
+  
+  
   <context-param>
     <param-name>socketPort</param-name>
     <param-value>4800</param-value>
@@ -67,6 +76,11 @@
     <listener-class>com.yeepay.service.impl.SocketServer</listener-class>
   </listener>
   
+  
+  
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
   <servlet> 	
   	<servlet-name>hessian</servlet-name> 	
   	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class> 	

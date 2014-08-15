@@ -14,7 +14,7 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">  
 
 
- 	<!-- 配置SessionFactory -->
+ 	<!-- 配置SessionFactory 
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="configLocation">
@@ -26,16 +26,35 @@
 			</list>
 		</property>
 	</bean>
-
-
-
-	<!-- 配置hibernateTemplate -->
-	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate4.HibernateTemplate">
-		<property name="sessionFactory" ref="sessionFactory"></property>
+-->
+	<!-- 数据库连接池c3p0配置 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="jdbcUrl" value="jdbc:mysql://60.1.1.25:3306/rango"></property>
+		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+		<property name="user" value="root"></property>
+		<property name="password" value="jira1322011"></property>
+		<property name="maxPoolSize" value="40"></property>
+		<property name="minPoolSize" value="1"></property>
+		<property name="initialPoolSize" value="1"></property>
+		<property name="maxIdleTime" value="20"></property>
 	</bean>
 
 
-
+	<!-- session工厂 -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="configLocation" value="classpath:xml/hibernate.cfg.xml"/>
+		<!-- 自动扫描注解方式配置的hibernate类文件 -->
+		<property name="packagesToScan">
+			<list>
+				<value>com.yeepay.entity</value>
+			</list>
+		</property>
+	</bean>
 
 	<!-- 配置事务管理器 -->
 	<bean id="transactionManager"

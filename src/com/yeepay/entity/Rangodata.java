@@ -27,7 +27,11 @@ import org.hibernate.annotations.GenericGenerator;
 @Table(name = "rangodata", catalog = "rango", uniqueConstraints = {@UniqueConstraint(columnNames={"id"})})
 public class Rangodata implements Serializable{
 
-	private static final long serialVersionUID = 1407724942430L;
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 49244213956900673L;
 	private Integer id;
 	private Integer port;
 	private String URL;
