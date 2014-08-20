@@ -14,8 +14,8 @@ public class MocoRunnerTest {
  public static void main(String[] args) {
 	 Runner runner;
 	 int p=12422;
-	 String url="/server.action";
-	 String re="椿椿欢迎你";
+	 String url="/server.action?username=cunchun";
+	 String re="椿椿欢迎你chunchun";
 	   HttpServer server = httpserver(p);
 //        server.response("foo");re
         server.get(by(uri(url))).response(re);
